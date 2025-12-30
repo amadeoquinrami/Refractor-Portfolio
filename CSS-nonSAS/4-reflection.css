@@ -1,0 +1,85 @@
+
+                        /* ERROR    figure out why my navigation lnks are not aligning right */
+.Nav-Links {
+    display: block;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: #40b5bc;
+    /* list-style: none; */
+    color: #b0d79f; 
+}
+.ul-List li {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 3rem 1rem 6rem;
+}
+.Nav-Links a {
+    text-decoration: none;
+    color: #0D00FF;
+}
+.Nav-Links li a:hover {
+    background-color: #b0d79f;
+}
+
+                                    /* body  modifications  */
+/* .Pro.dev {
+    padding: 16px 24px;
+    max-width: 500px; 
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(168, 213, 186, 0.3);
+
+} */
+
+.nav.header {
+    width: 100%;
+    background-color: #11a209a8;
+    text-align: center;
+    padding: 10px 0;
+}
+.header {
+    padding: 20px;
+
+}
+nav.header ul {
+    list-style: none;
+}
+                            /* section that holds paragraphs  */
+.main-content_container {
+ font-family: Georgia, 'Times New Roman', Times, serif;
+    order: 2px solid #a8d5ba; /* pastel green border */
+    background-color: #e8f8ee;
+    color: #3a5743;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(215, 255, 215);
+    color: green;
+   align-items: center;
+}
+h1 {
+    text-transform: uppercase;
+}
+h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+ p {
+  border: 2px solid #a8d5ba; /* pastel green border */
+  background-color: #e8f8ee; /* soft mint background */
+  color: #3a5743; /* darker green text */
+  border-radius: 10px;
+  padding: 16px 24px;
+  max-width: 500px; /* limits how wide it gets */
+  text-align: center;
+  line-height: 2;
+  box-shadow: 0 4px 10px rgba(168, 213, 186, 0.3);
+}
+
+                            /* footer logo image */
+.imgfooter{
+width: 50px;
+height: 50px;
+display: inline-flex;
+                /* come back to fix size and  */
+}

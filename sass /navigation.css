@@ -1,0 +1,39 @@
+body {
+  padding-top: 70px;
+}
+
+.Nav-Links {
+  display: inline-flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #40B5BC;
+  z-index: 10;
+}
+
+.ul-List {
+  display: flex;
+  justify-content: center;
+}
+
+.ul-List li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1rem 3rem 1rem 6rem;
+}
+
+.Nav-Links a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #0D00FF;
+}
+
+.Nav-Links li a:hover {
+  text-decoration: none;
+  background-color: #b0d79f;
+  background-size: cover;
+  border-radius: 50px;
+}/*# sourceMappingURL=navigation.css.map */

@@ -1,0 +1,9 @@
+.name {
+  font-size: 32px;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}/*# sourceMappingURL=secpage.css.map */

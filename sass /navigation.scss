@@ -1,0 +1,54 @@
+                     // connected to index, 
+$blue1: #40B5BC;
+$blue2: #5AC6C6;
+$plain: #D3DACE;
+$green1: #b0d79f;
+$green2: #cbe6c0;
+$neonBlue:#0D00FF;
+$neongreen:#2FFF00;
+
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+body {
+    padding-top: 70px;
+}
+.Nav-Links {
+    display: inline-flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: $blue1;
+    z-index: 10;  
+    @include m.respond(phone) {
+        background-color: #2FFF00;
+    }
+}
+.ul-List {
+    display: flex;
+    justify-content: center;
+}
+.ul-List li {
+    // display: inline-flex;
+     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 1rem 3rem 1rem 6rem;
+    @include respond(phone) {
+        padding: 0;
+    }
+}
+.Nav-Links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: $neonBlue;
+}
+.Nav-Links li a:hover {
+    text-decoration: none;
+    background-color: $green1;
+    background-size: cover;
+    border-radius: 50px;
+}

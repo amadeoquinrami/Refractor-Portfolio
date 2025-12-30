@@ -1,0 +1,38 @@
+.name {
+  font-size: 32px;
+}
+
+.main-content_container {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  order: 2px solid #a8d5ba;
+  background-color: #e8f8ee;
+  color: #3a5743;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(215, 255, 215);
+  color: green;
+  align-items: center;
+}
+
+.Pro.dev,
+.tech.dev,
+.Personal.dev {
+  text-transform: uppercase;
+}
+
+.question-text {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.reflection-paragraph {
+  border: 2px solid #a8d5ba;
+  background-color: #e8f8ee;
+  color: #3a5743;
+  border-radius: 10px;
+  padding: 16px 24px;
+  max-width: 500px;
+  text-align: center;
+  line-height: 2;
+  box-shadow: 0 4px 10px rgba(168, 213, 186, 0.3);
+}/*# sourceMappingURL=thirdpage.css.map */

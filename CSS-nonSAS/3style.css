@@ -1,0 +1,28 @@
+body{
+    background-color: #d3dace;
+
+}
+/* Navigation links */
+.Nav-Links {
+    display: block;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: #40b5bc;
+    color: #b0d79f;
+}
+.ul-List li {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem 1rem 6rem;
+ } 
+.Nav-Links a {
+    text-decoration: none;
+    color: #0D00FF;
+}
+.Nav-Links li a:hover {
+    text-decoration: none;
+    background-color: #b0d79f;
+}
