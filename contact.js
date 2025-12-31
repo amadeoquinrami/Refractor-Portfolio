@@ -12,12 +12,12 @@ const ContactForm = document.getElementById("Contact-form");
 ContactForm.addEventListener("submit", function(event){
     event.preventDefault(); // prevents the page froom submitting until the fields are filled.
 
-    if (InputName.value.length < 3 || InputName.value.length > 13) {
+    if (InputName.value.length < 5 ) {
         InputName.style.border = "2px solid red";
         nameError.textContent = ("Name is invalid");
         return;
     }
-    if (InputEmail.value.length > 23  || InputEmail.value.length < 6) {
+    if (InputEmail.value.length > 35  || InputEmail.value.length < 6) {
         InputEmail.style.border = "2px solid red";
         emailError.textContent = ("email is Too short or too long or needs an @");
         return;
