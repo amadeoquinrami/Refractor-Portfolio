@@ -1,6 +1,18 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 main {
+  display: flex;
+  flex-direction: column;
   background-color: #D3DACE;
-  display: grid;
+  align-items: center;
 }
 
 .name {
@@ -9,16 +21,32 @@ main {
 
 .account-content {
   display: flex;
-  position: sticky;
-  top: 0;
   justify-content: center;
-  padding: 2em 4em;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  padding: 2em;
   background-color: rgb(232, 248, 238);
   border-radius: 12px;
   border: 2px solid #a8d5ba;
 }
 
+.PicSlideshow {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+#Contact-form {
+  width: 100%;
+  max-width: 600px;
+}
+
 #Contact-form .row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
   font-size: 1em;
   color: rgba(36, 87, 4, 0.9411764706);
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -27,8 +55,8 @@ main {
 .Input-text,
 .Input-email,
 .Input-comment {
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
+  padding: 0.6em;
   color: rgba(36, 87, 4, 0.9411764706);
   font-size: 1em;
 }
@@ -44,4 +72,64 @@ main {
 #submit-Bttn:hover {
   border: solid #2FFF00 2px;
   cursor: pointer;
+}
+
+footer {
+  margin-top: 3em;
+}
+
+@media (max-width: 1024px) {
+  .account-content {
+    padding: 2em;
+    position: static;
+  }
+  .name {
+    font-size: 26px;
+  }
+  #Contact-form {
+    max-width: 500px;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    padding: 1em;
+  }
+  .account-content {
+    padding: 1.5em 1em;
+    border-radius: 8px;
+  }
+  .name {
+    font-size: 22px;
+    text-align: center;
+  }
+  #Contact-form {
+    max-width: 100%;
+  }
+  .Input-text,
+  .Input-email,
+  .Input-comment {
+    width: 100%;
+    font-size: 0.95em;
+  }
+  #submit-Bttn {
+    width: 100%;
+    padding: 0.75em;
+    font-size: 1em;
+  }
+}
+@media (max-width: 768px) {
+  label {
+    margin-bottom: 0.3em;
+  }
+  input {
+    min-height: 44px;
+  }
+}
+@media (max-width: 480px) {
+  .name {
+    font-size: 20px;
+  }
+  #Contact-form .row {
+    font-size: 0.9em;
+  }
 }/*# sourceMappingURL=fourthpage.css.map */

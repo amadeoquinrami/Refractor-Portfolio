@@ -1,20 +1,57 @@
+/* 
+0 - 600px:      phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscapr
+[]1200 - 1800px:]   is where our normal sttyles apply 
+1800px + :  Big desktop
+*/
+/*  order base + toptography > general layout*/
+/* ORDER of Query is [tab-land, tab-port, big-desktop]*/
 /* footer logo image*/
 .links-AtBttn {
   display: flex;
   background-color: #40B5BC;
   justify-content: space-around;
   align-items: center;
+  background: linear-gradient(360deg, #40B5BC 0%, #3c9abc 25%, #40B5BC 50%, #3c9abc 75%, #40B5BC 100%);
   padding: 1em;
+  flex-wrap: wrap;
 }
 
-.imgfooter {
-  width: 50px;
-  height: 50px;
+.imgfooter img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: inline-flex;
   background-color: rgba(255, 255, 255, 0.91);
+  transition: all 0.3s ease;
 }
-
-.imgfooter:hover {
+.imgfooter img:hover {
   border: #2FFF00 solid 0.5em;
   border-radius: 2em;
-}/*# sourceMappingURL=footer.css.map */
+}
+
+@media (max-width: 37.5em) {
+  .links-AtBttn {
+    flex-direction: column;
+    padding: 0.5em;
+  }
+  .imgfooter {
+    width: 50px;
+    height: 50px;
+    margin: 0.5em 0;
+  }
+}
+/* Tablet: 768px to 1024px */
+@media (max-width: 112.5em) {
+  .links-AtBttn {
+    justify-content: space-evenly;
+    padding: 0.8em;
+  }
+  .imgfooter {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* Phone: 480px to 767px *//*# sourceMappingURL=footer.css.map */

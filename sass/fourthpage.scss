@@ -5,35 +5,59 @@ $green1: #b0d79f;
 $green2: #cbe6c0;
 $neonBlue:#245704f0;
 $neongreen:#2FFF00;
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 main {
+    display: flex;
+    flex-direction: column;
     background-color: $plain;
-    display: grid;
+    align-items: center;
 }.name {
     font-size: 32px;
 }
 .account-content {
     display: flex;
-    position: sticky;
-    top: 0;
     justify-content: center;
-    padding: 2em 4em ; 
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    padding: 2em; 
     background-color: rgb(232, 248, 238);
     border-radius: 12px;
     border: 2px solid #a8d5ba; 
+    // outline: 3px solid blue;
 
     
 }
+.PicSlideshow {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+#Contact-form {
+    width: 100%;
+    max-width: 600px;
+}
 #Contact-form .row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
     font-size: 1em;
-    
     color: $neonBlue;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .Input-text,
 .Input-email,
 .Input-comment {
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
+    padding: 0.6em;
     color: $neonBlue;
     font-size: 1em;
 }
@@ -48,4 +72,74 @@ main {
 #submit-Bttn:hover {
     border: solid $neongreen 2px ;
     cursor: pointer;
+}
+footer {
+    margin-top: 3em;
+
+}
+                            //////MEDIA Q
+@media (max-width: 1024px) {
+    .account-content {
+        padding: 2em;
+        position: static;
+    }
+    .name {
+        font-size: 26px;
+    }
+    #Contact-form {
+        max-width: 500px;
+    }
+}
+
+                /// mobile
+@media (max-width: 768px) {
+  main {
+    padding: 1em;
+  }
+
+  .account-content {
+    padding: 1.5em 1em;
+    border-radius: 8px;
+  }
+
+  .name {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  #Contact-form {
+    max-width: 100%;
+  }
+
+  .Input-text,
+  .Input-email,
+  .Input-comment {
+    width: 100%;
+    font-size: 0.95em;
+  }
+
+  #submit-Bttn {
+    width: 100%;
+    padding: 0.75em;
+    font-size: 1em;
+  }
+}
+@media (max-width: 768px) {
+  label {
+    margin-bottom: 0.3em;
+  }
+
+  input {
+    min-height: 44px; // Apple touch target guideline
+  }
+}
+///// 
+@media (max-width: 480px) {
+  .name {
+    font-size: 20px;
+  }
+
+  #Contact-form .row {
+    font-size: 0.9em;
+  }
 }

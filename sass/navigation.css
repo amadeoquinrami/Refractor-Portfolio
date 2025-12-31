@@ -9,126 +9,104 @@
 /* ORDER of Query is [tab-land, tab-port, big-desktop]*/
 body {
   padding-top: 70px;
+  background-color: #D3DACE;
 }
 
 .Nav-Links {
   position: fixed;
   top: 0;
   width: 100%;
-  overflow: hidden;
   background-color: #40B5BC;
   z-index: 10;
-}
-
-.ul-List li {
-  display: inline-flex;
+  background: linear-gradient(360deg, #40B5BC 0%, #3c9abc 25%, #40B5BC 50%, #3c9abc 75%, #40B5BC 100%);
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em 3em 1em 1em;
 }
 
-.Nav-Links a {
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
+#nav-toggle {
+  display: none;
 }
 
-.Nav-Links li a:hover {
-  text-decoration: none;
-  background-color: #b0d79f;
-  background-size: cover;
-  border-radius: 50px;
-}
-
-/*
-    @include mixins.respond(phone) {
-        padding: 0;
-        font-size: 50%;
-        .Nav-Links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 0 2rem;
-  z-index: 10;
-
-  @include unique-gradient($blue1, $blue2);
-
-  // Hamburger menu button hidden by default
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-
-    span {
-      height: 3px;
-      width: 25px;
-      background: $neonBlue;
-      margin: 4px 0;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-  }
-
-  // Media query for phones
-  @include respond(phone) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-
-    .ul-List {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-
-      li {
-        padding: 0.5rem 0;
-        width: 100%;
-        text-align: left;
-      }
-    }
-
-    .hamburger {
-      display: flex;
-    }
-
-    &.open {
-      .ul-List {
-        display: flex;
-      }
-    }
-  }
-}
-
-// Menu list
 .ul-List {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.ul-List li {
+  padding: 1em 3em 1em 1em;
+}
+.ul-List a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+.ul-List a:hover {
+  background-color: #b0d79f;
+  border-radius: 50px;
+  padding: 0.5em 1em;
+}
 
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 3rem;
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .Nav-Links {
+    justify-content: space-between;
+    padding: 1rem 2rem;
   }
-
-  a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: $neonBlue;
-    transition: all 0.3s;
-
-    &:hover {
-      background-color: $green1;
-      border-radius: 50px;
-      padding: 0.5rem 1rem;
-    }
+  .hamburger {
+    display: flex;
+  }
+  .ul-List {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #40B5BC;
+    flex-direction: column;
+    display: none;
+    z-index: 20;
+    background: linear-gradient(360deg, #40B5BC 0%, #3c9abc 25%, #40B5BC 50%, #3c9abc 75%, #40B5BC 100%);
+  }
+  .ul-List li {
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: left;
   }
 }
-    }
-    @include mixins.unique-gradient ($blue1, $blue2, 360deg);
+#nav-toggle:checked ~ .ul-List {
+  display: flex;
+}
+
+#nav-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#nav-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#nav-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* 
+0 - 600px:      phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscapr
+[]1200 - 1800px:]   is where our normal sttyles apply 
+1800px + :  Big desktop
 *//*# sourceMappingURL=navigation.css.map */

@@ -1,4 +1,15 @@
- $blue1: #40B5BC;
+@use 'mixins';
+@mixin unique-gradient($blue1, $blue2, $direction: 360deg) { //is a metaliic 
+    background: linear-gradient(
+        $direction,
+        $blue1 0%,
+        $blue2 25%,
+        $blue1 50%,
+        $blue2 75%,
+        $blue1 100%
+        );
+}
+$blue1: #40B5BC;
 $blue2: #3c9abc;
 $plain: #D3DACE;
 $green1: #b0d79f;
@@ -11,21 +22,47 @@ $neongreen:#2FFF00;
         background-color: $blue1;
         justify-content: space-around;
         align-items: center;
-
+        @include unique-gradient($blue1,$blue2);
         padding: 1em;
-        // a {
-        //         justify-content: space-evenly;
-        // }
+        flex-wrap: wrap;
 }
-.imgfooter{
-width: 50px;
-height: 50px;
+.imgfooter img {
+width: 100%;
+height: 100%;
+object-fit: contain;
 display: inline-flex;
 background-color: rgba(255, 255, 255, 0.91);
+transition: all 0.3s ease;
 
-
-}
-.imgfooter:hover {
+&:hover {
 border: #2FFF00 solid .5em;
 border-radius: 2em;
 }
+}
+                        //MEDIA Q
+                        @media (max-width: 37.5em) {
+  .links-AtBttn {
+    flex-direction: column; // stack items vertically
+    padding: 0.5em;
+  }
+
+  .imgfooter {
+    width: 50px;
+    height: 50px;
+    margin: 0.5em 0;
+  }
+}
+/* Tablet: 768px to 1024px */
+@media (max-width: 112.5em) {
+  .links-AtBttn {
+    justify-content: space-evenly;
+    padding: 0.8em;
+  }
+
+  .imgfooter {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Phone: 480px to 767px */

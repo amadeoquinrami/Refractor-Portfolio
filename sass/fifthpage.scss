@@ -13,8 +13,14 @@ $pink: #FFB6C1;
 $blue: #A7C7E7;
 $Brown: #B08968;
 
+main {
+    background-color: $plain;
+    display: grid;
+    justify-content: center;
+}
 .challenge-container {
-    width: 1000px;
+    width: 90%;
+    max-width: 1000px;
     margin: 30px auto ;
 
     display: grid;
@@ -22,7 +28,7 @@ $Brown: #B08968;
     200px [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
     
     grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
-    grid-gap: 30px;
+    grid-gap: 20px;
 
     grid-template-areas: " . head head ."
                             "box-1 box-2 box-3 side"
@@ -102,7 +108,41 @@ $Brown: #B08968;
     }
 
 }
+          ///////MEDIA Q
+@media (max-width: 1024px) {
+  .challenge-container {
+    grid-template-columns: 1fr 1fr; // 2 columns
+    grid-template-areas:
+      "head head"
+      "box-1 box-2"
+      "box-3 side"
+      "main main"
+      "footer footer";
+    
+    & > * {
+      font-size: 24px;
+      padding: 15px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .challenge-container {
+    grid-template-columns: 1fr; // 1 column
+    grid-template-areas:
+      "head"
+      "box-1"
+      "box-2"
+      "box-3"
+      "side"
+      "main"
+      "footer";
 
+    & > * {
+      font-size: 18px;
+      padding: 10px;
+    }
+  }
+}
 
 
 // method one line numbers
