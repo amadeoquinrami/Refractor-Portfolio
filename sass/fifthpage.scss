@@ -1,0 +1,189 @@
+// $blue1: #40B5BC;
+// $blue2: #5AC6C6;
+$plain: #D3DACE;
+// $green1: #b0d79f;
+// $green2: #cbe6c0;
+// $neonBlue:#0D00FF;
+// $neongreen:#2FFF00;
+
+$Orange:#FFB703 ;
+$green: #9ED9A0;
+$violet: #C3B1E1;
+$pink: #FFB6C1;
+$blue: #A7C7E7;
+$Brown: #B08968;
+
+.challenge-container {
+    width: 1000px;
+    margin: 30px auto ;
+
+    display: grid;
+    grid-template-rows: [header-start] 100px [header-end box-start]
+    200px [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
+    
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
+    grid-gap: 30px;
+
+    grid-template-areas: " . head head ."
+                            "box-1 box-2 box-3 side"
+                            "main main main side"
+                            "footer footer footer footer";    
+  & > * {
+    background-color: orangered;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .header {
+    grid-area: head;
+  }
+  .small-box-1 {grid-area: box-1}
+  .small-box-2 {grid-area: box-2}
+  .small-box-3 {grid-area: box-3}
+
+  .sidebar {
+    grid-area: side;
+  }
+  .main-content {
+    grid-area: main;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+
+.item {
+    padding: 20px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    
+    &--1 {
+        background-color: $Orange;
+        // grid-row-start: 2;
+        // grid-row-end: 3;
+        // grid-column-start: 2;
+        // grid-column-end: 3;
+
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        z-index: 10;
+    }
+     &--2 {
+       background-color: $green; 
+      //  grid-column: 2 / span 2;
+      grid-column: 1 / -1;
+    }
+     &--3 {
+       background-color: $violet; 
+       grid-column: 1 /3;
+       grid-row: 2 / 3 ;
+    }
+     &--4 {
+       background-color: $pink; 
+    }
+     &--5 {
+       background-color: $blue; 
+      //  grid-row: 1 /2;
+      //  grid-column: 3 /4 ;
+      grid-area: 1/3/3/4;
+
+    }
+     &--6 {
+       background-color: $Brown; 
+       grid-row: 1/2;
+       grid-column: 2/3;
+    }
+    &--7 {
+      background-color: orangered;
+
+    }
+
+}
+
+
+
+// method one line numbers
+/*
+.challenge-container {
+    width: 1000px;
+    margin: 30px auto ;
+
+    display: grid;
+    grid-template-rows: [header-start] 100px [header-end box-start]
+    200px [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
+    
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
+    grid-gap: 30px;
+  & > * {
+    background-color: orangered;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .header {
+    grid-column: col-start 1 / grid-end;
+  }
+  .sidebar {
+    grid-column: col-end 3 / grid-end;
+    grid-row: box-start / main-end ;
+  }
+  .main-content {
+    grid-column: col-start 1 / col-end 3;
+  }
+  .footer {
+    grid-column: 1 / grid-end;
+  }
+}
+
+.item {
+    padding: 20px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    
+    &--1 {
+        background-color: $Orange;
+        // grid-row-start: 2;
+        // grid-row-end: 3;
+        // grid-column-start: 2;
+        // grid-column-end: 3;
+
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        z-index: 10;
+    }
+     &--2 {
+       background-color: $green; 
+      //  grid-column: 2 / span 2;
+      grid-column: 1 / -1;
+    }
+     &--3 {
+       background-color: $violet; 
+       grid-column: 1 /3;
+       grid-row: 2 / 3 ;
+    }
+     &--4 {
+       background-color: $pink; 
+    }
+     &--5 {
+       background-color: $blue; 
+      //  grid-row: 1 /2;
+      //  grid-column: 3 /4 ;
+      grid-area: 1/3/3/4;
+
+    }
+     &--6 {
+       background-color: $Brown; 
+       grid-row: 1/2;
+       grid-column: 2/3;
+    }
+    &--7 {
+      background-color: orangered;
+
+    }
+
+} */

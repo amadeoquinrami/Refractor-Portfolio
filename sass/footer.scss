@@ -1,0 +1,31 @@
+ $blue1: #40B5BC;
+$blue2: #3c9abc;
+$plain: #D3DACE;
+$green1: #b0d79f;
+$green2: #cbe6c0;
+$neonBlue:#0D00FF;
+$neongreen:#2FFF00;    
+     /* footer logo image*/
+.links-AtBttn {
+        display:flex ;
+        background-color: $blue1;
+        justify-content: space-around;
+        align-items: center;
+
+        padding: 1em;
+        // a {
+        //         justify-content: space-evenly;
+        // }
+}
+.imgfooter{
+width: 50px;
+height: 50px;
+display: inline-flex;
+background-color: rgba(255, 255, 255, 0.91);
+
+
+}
+.imgfooter:hover {
+border: #2FFF00 solid .5em;
+border-radius: 2em;
+}

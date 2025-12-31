@@ -1,0 +1,9 @@
+/* 
+0 - 600px:      phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscapr
+[]1200 - 1800px:]   is where our normal sttyles apply 
+1800px + :  Big desktop
+*/
+/*  order base + toptography > general layout*/
+/* ORDER of Query is [tab-land, tab-port, big-desktop]*//*# sourceMappingURL=mixins.css.map */

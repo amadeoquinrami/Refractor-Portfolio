@@ -1,0 +1,33 @@
+$blue1: #40B5BC;
+$blue2: #3c9abc;
+$plain: #D3DACE;
+$green1: #b0d79f;
+$green2: #cbe6c0;
+$neonBlue:#245704f0;
+$neongreen:#2FFF00;
+
+.name {
+    font-size: 32px;
+}
+main {
+    background-color: $plain; 
+    display: grid;
+}
+.resume-container {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    padding: 2rem 1rem;
+}
+.resume-frame {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 8.5/11;
+    overflow: hidden;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+                

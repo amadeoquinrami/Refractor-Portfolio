@@ -1,0 +1,47 @@
+main {
+  background-color: #D3DACE;
+  display: grid;
+}
+
+.name {
+  font-size: 32px;
+}
+
+.account-content {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  padding: 2em 4em;
+  background-color: rgb(232, 248, 238);
+  border-radius: 12px;
+  border: 2px solid #a8d5ba;
+}
+
+#Contact-form .row {
+  font-size: 1em;
+  color: rgba(36, 87, 4, 0.9411764706);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.Input-text,
+.Input-email,
+.Input-comment {
+  display: flex;
+  justify-content: space-around;
+  color: rgba(36, 87, 4, 0.9411764706);
+  font-size: 1em;
+}
+
+#submit-Bttn {
+  color: #b0d79f;
+  background-color: rgba(36, 87, 4, 0.9411764706);
+  border-radius: 2em;
+  font-size: 1em;
+  border: solid #b0d79f 2px;
+}
+
+#submit-Bttn:hover {
+  border: solid #2FFF00 2px;
+  cursor: pointer;
+}/*# sourceMappingURL=fourthpage.css.map */

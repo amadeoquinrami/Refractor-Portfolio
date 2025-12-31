@@ -1,0 +1,151 @@
+@use 'mixins';
+// @use "../sass/variables"; 
+      // connected to index, 
+$blue1: #40B5BC;
+$blue2: #3c9abc;
+$plain: #D3DACE;
+$green1: #b0d79f;
+$green2: #cbe6c0;
+$neonBlue:#245704f0;
+$neongreen:#2FFF00;
+@mixin unique-gradient($blue1, $blue2, $direction: 360deg) { //is a metaliic 
+    background: linear-gradient(
+        $direction,
+        $blue1 0%,
+        $blue2 25%,
+        $blue1 50%,
+        $blue2 75%,
+        $blue1 100%
+        );
+    }
+body {
+    padding-top: 70px;
+}
+.Nav-Links {
+    // display: inline-flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: $blue1;
+    z-index: 10;  
+
+}
+
+
+// .ul-List {
+//     display: flex;
+//     justify-content: center;
+// }
+.ul-List li {
+     display: inline-flex;
+    //  flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 3em 1em 1em;
+    
+}
+.Nav-Links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+ 
+}
+.Nav-Links li a:hover {
+    text-decoration: none;
+    background-color: $green1;
+    background-size: cover;
+    border-radius: 50px;
+}
+/*
+    @include mixins.respond(phone) {
+        padding: 0;
+        font-size: 50%;
+        .Nav-Links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 2rem;
+  z-index: 10;
+
+  @include unique-gradient($blue1, $blue2);
+
+  // Hamburger menu button hidden by default
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+      height: 3px;
+      width: 25px;
+      background: $neonBlue;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  // Media query for phones
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+
+    .ul-List {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+
+      li {
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    &.open {
+      .ul-List {
+        display: flex;
+      }
+    }
+  }
+}
+
+// Menu list
+.ul-List {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: $neonBlue;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $green1;
+      border-radius: 50px;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+    }
+    @include mixins.unique-gradient ($blue1, $blue2, 360deg);
+*/

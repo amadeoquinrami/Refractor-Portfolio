@@ -1,0 +1,20 @@
+/* footer logo image*/
+.links-AtBttn {
+  display: flex;
+  background-color: #40B5BC;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+}
+
+.imgfooter {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  background-color: rgba(255, 255, 255, 0.91);
+}
+
+.imgfooter:hover {
+  border: #2FFF00 solid 0.5em;
+  border-radius: 2em;
+}/*# sourceMappingURL=footer.css.map */

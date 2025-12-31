@@ -1,0 +1,51 @@
+$blue1: #40B5BC;
+$blue2: #5AC6C6;
+$plain: #D3DACE;
+$green1: #b0d79f;
+$green2: #cbe6c0;
+$neonBlue:#245704f0;
+$neongreen:#2FFF00;
+main {
+    background-color: $plain;
+    display: grid;
+}.name {
+    font-size: 32px;
+}
+.account-content {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    padding: 2em 4em ; 
+    background-color: rgb(232, 248, 238);
+    border-radius: 12px;
+    border: 2px solid #a8d5ba; 
+
+    
+}
+#Contact-form .row{
+    font-size: 1em;
+    
+    color: $neonBlue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.Input-text,
+.Input-email,
+.Input-comment {
+    display: flex;
+    justify-content: space-around;
+    color: $neonBlue;
+    font-size: 1em;
+}
+#submit-Bttn {
+    color: $green1;
+    background-color: $neonBlue;
+    border-radius: 2em;
+    font-size: 1em;
+    border: solid $green1 2px;
+    
+}
+#submit-Bttn:hover {
+    border: solid $neongreen 2px ;
+    cursor: pointer;
+}

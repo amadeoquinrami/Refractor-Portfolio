@@ -1,0 +1,27 @@
+.name {
+  font-size: 32px;
+}
+
+main {
+  background-color: #D3DACE;
+  display: grid;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.resume-frame {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 8.5/11;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}/*# sourceMappingURL=secpage.css.map */
