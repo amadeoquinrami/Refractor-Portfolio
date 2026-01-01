@@ -4,11 +4,6 @@ main {
   display: grid;
   justify-content: center;
 }
-.PicSlideshow {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 
 /* slide show using animations */
 .keyframe-Slideshow {
